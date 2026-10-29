@@ -1,30 +1,12 @@
 {
+  "SPDX-FileCopyrightText": "2026 roolrz",
+  "SPDX-License-Identifier": "Apache-2.0",
   "version": 1,
-  "name": "vm-policy",
+  "name": "lib-vm-policy",
   "kind": "library",
   "origin": {
     "repository": "https://github.com/roolrz/HypeR",
     "commit": "8d42d047058a2b58a291803700e86487fb723f7a"
-  },
-  "sources": {
-    "Cargo.toml": "lib/vm-policy/Cargo.toml",
-    "component.mk": "lib/vm-policy/component.mk",
-    "shared/Cargo.toml": "lib/vm-policy/shared/Cargo.toml",
-    "shared/src/lib.rs": "lib/vm-policy/shared/src/lib.rs",
-    "src/affinity.rs": "lib/vm-policy/src/affinity.rs",
-    "src/fleet.rs": "lib/vm-policy/src/fleet.rs",
-    "src/image.rs": "lib/vm-policy/src/image.rs",
-    "src/lib.rs": "lib/vm-policy/src/lib.rs",
-    "src/scheduling.rs": "lib/vm-policy/src/scheduling.rs",
-    "tests/affinity.rs": "lib/vm-policy/tests/affinity.rs",
-    "tests/fleet.rs": "lib/vm-policy/tests/fleet.rs",
-    "tests/image.rs": "lib/vm-policy/tests/image.rs",
-    "tests/limits.rs": "lib/vm-policy/tests/limits.rs"
-  },
-  "SPDX-FileCopyrightText": "2026 roolrz",
-  "SPDX-License-Identifier": "Apache-2.0",
-  "mounts": {
-    "": "lib/vm-policy"
   },
   "packages": [
     "hyper-vm-policy",
@@ -36,45 +18,5 @@
       "app-test",
       "APP_TEST_PACKAGE=hyper-vm-policy"
     ]
-  ],
-  "cargo_context": {
-    "Cargo.toml": {
-      "workspace": null,
-      "membership": "../../app",
-      "dependency_paths": {
-        "/dependencies/hyper-service": "lib/service",
-        "/dependencies/hyper-vm-image": "lib/vm-image"
-      },
-      "inherited_dependencies": {
-        "/dependencies/hyper-os": {
-          "workspace": true
-        },
-        "/dependencies/hyper-service": {
-          "workspace": true
-        },
-        "/dependencies/hyper-vm-image": {
-          "workspace": true
-        },
-        "/dependencies/serde": {
-          "workspace": true
-        },
-        "/dependencies/serde_json": {
-          "workspace": true
-        }
-      }
-    },
-    "shared/Cargo.toml": {
-      "workspace": null,
-      "membership": "../../../app",
-      "dependency_paths": {
-        "/dependencies/implementation": "lib/vm-policy",
-        "/dependencies/hyper-rust-std": "stdlib/rust-std"
-      },
-      "inherited_dependencies": {
-        "/dependencies/hyper-rust-std": {
-          "workspace": true
-        }
-      }
-    }
-  }
+  ]
 }
